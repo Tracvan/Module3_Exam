@@ -1,7 +1,7 @@
 package model;
 
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Student {
     int id;
@@ -9,15 +9,15 @@ public class Student {
     LocalDate birth;
     String address;
     String phoneNumber;
-    int classRoom;
+    String className;
 
-    public Student(int id, String name, LocalDate birth, String address, String phoneNumber, int classRoom) {
+    public Student(int id, String name, LocalDate birth, String address, String phoneNumber, String className) {
         this.id = id;
         this.name = name;
         this.birth = birth;
         this.address = address;
         this.phoneNumber = phoneNumber;
-        this.classRoom = classRoom;
+        this.className = className;
     }
 
     public Student() {
@@ -63,23 +63,13 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getClassRoom() {
-        return classRoom;
+    public String getClassName() {
+        return className;
     }
 
-    public void setClassRoom(int classRoom) {
-        this.classRoom = classRoom;
+    public void setClassName(String className) {
+        this.className = className;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", birth=" + birth +
-                ", address='" + address + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", classRoom=" + classRoom +
-                '}';
-    }
+
 }

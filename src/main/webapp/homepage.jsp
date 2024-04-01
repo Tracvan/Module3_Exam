@@ -23,15 +23,21 @@
         <td>${student.birth}</td>
         <td>${student.address}</td>
         <td>${student.phoneNumber}</td>
-        <td>${student.classRoom}</td>
-        <td> <form action="editServlet" method="GET">
-            <input type="hidden" name="studentId" value="${student.id}" />
-            <button type="submit">Edit</button>
-        </form></td>
-        <td><form action="deleteServlet" method="GET">
-            <input type="hidden" name="studentId" value="${student.id}" />
-            <button type="submit">Delete</button>
-        </form></td>
+        <td>${student.className}</td>
+        <td>
+            <form action="/homepage" method="GET">
+                <input type="hidden" name="action" value="edit" />
+                <input type="hidden" name="studentId" value="${student.id}" />
+                <button type="submit">Edit</button>
+            </form>
+        </td>
+        <td>
+            <form action="/homepage" method="GET">
+                <input type="hidden" name="action" value="delete" />
+                <input type="hidden" name="studentId" value="${student.id}" />
+                <button type="submit">Delete</button>
+            </form>
+        </td>
     </tr>
     </c:forEach>
 </table>

@@ -10,11 +10,10 @@ import java.util.List;
 public interface IStudentDAO {
     public void insertStudent(Student student);
 
-    public void updateStudent(int id);
+    public void updateStudent(Student student) throws SQLException;
 
     public List<Student> selectAll(HttpServletRequest request, HttpServletResponse response) throws SQLException;
 
-    public void deleteStudent(HttpServletRequest request, HttpServletResponse response);
-
-    void deleteStudent(int id);
+    public void deleteStudent(int id) throws SQLException;
+    public Student selectStudent(int id) throws SQLException;
 }
